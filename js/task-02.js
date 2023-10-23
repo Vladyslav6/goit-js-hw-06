@@ -6,8 +6,11 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-// document.createElement();
-const addlist = ingredients.forEach((Number) => {
-  const listcategory = document.querySelector("#ingredients .item");
-  console.log(Number);
+
+const Jora = document.getElementById("ingredients");
+ingredients.forEach((ingredient) => {
+  const JoraList = document.createElement("li");
+  JoraList.textContent = ingredient;
+  JoraList.classList.add("item");
+  Jora.appendChild(JoraList);
 });
