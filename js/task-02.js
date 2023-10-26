@@ -7,11 +7,30 @@ const ingredients = [
   "Condiments",
 ];
 
-const UlIng = document.querySelector("#ingredients");
-const ingrList = ingredients
-  .map((ingr) => `<li class="item">${ingr}</li>`)
-  .join("");
-UlIng.innerHTML = ingrList;
+const ulIngredients = document.querySelector("#ingredients");
+const DomOptim = document.createDocumentFragment();
+
+ingredients.forEach((ingr) => {
+  const list = document.createElement("li");
+  list.textContent = ingr;
+  list.classList.add("item");
+  DomOptim.appendChild(list);
+});
+ulIngredients.appendChild(DomOptim);
+// const UlIng = document.querySelector("#ingredients");
+// let CreLi;
+// CreLi.classList.add("item");
+// CreLi = document.createElement("li");
+// ingredients.map((ingr) => {
+//   CreLi.textContent = ingr;
+//   UlIng.append(CreLi);
+// });
+
+// const UlIng = document.querySelector("#ingredients");
+// let CreLi = document.createElement("li");
+// CreLi.classList.add("item");
+// const ingrList = ingredients.map((ingr) => `${CreLi}`).join("");
+// UlIng.innerHTML = ingrList;
 
 // ingredients.forEach((ingr) => {
 //   const Lilist = document.createElement("li");

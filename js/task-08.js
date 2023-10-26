@@ -10,7 +10,7 @@ function handleSubmit(evt) {
   const password = registerForm.elements.password.value;
 
   if (email === "" || password === "") {
-    return console.log("alert! Please input your email and password");
+    return alert("Please input your email and password");
   }
   const EmeilandPass = {
     Emeil: email,

@@ -2,7 +2,7 @@ const InputRange = document.querySelector("#font-size-control");
 const InputText = document.querySelector("#text");
 // console.log(InputRange.getAttribute("min"));
 // console.log(InputRange.value);
-InputRange.addEventListener("click", Event2);
+InputRange.addEventListener("input", Event2);
 
 function Event2(ev) {
   console.log(InputRange.value);
